@@ -1,0 +1,32 @@
+//binary search
+#include <stdio.h>
+int main()
+{
+    int a[]={0,1,2,3,4,5,6,7,8,9,10},val,i=0;
+    printf("Enter the element to be searched:");
+    scanf("%d",&val);
+    int beg=0,end=10,mid=(beg+end)/2;
+    while(beg<=end)
+    {
+        if(a[mid]==val)
+        {
+            printf("Element is found at %d",mid);
+            break;
+        }
+        else if(a[mid]<val)
+        {
+            beg=mid+1;
+            mid=(beg+end)/2;
+        }
+        else
+        {
+            end=mid-1;
+            mid=(beg+end)/2;
+        }
+    }    
+    if(beg>end)
+    {
+        printf("Element not found");
+    }
+    return 0;
+}
