@@ -1,0 +1,20 @@
+//linear search
+#include <stdio.h>
+int main()
+{
+    int i=0,val;
+    int a[]={45,12,80,10,4};
+    int n=len(a);
+    printf("Enter any value you want to search:");
+    scanf("%d",&val);
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==val){
+            printf("element is found at position %d",i);
+            break;
+        }
+    }
+    if(i==n)
+    {printf("Not found");}
+    return 0;
+}
