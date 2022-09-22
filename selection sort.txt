@@ -1,0 +1,25 @@
+//selection sort1
+#include <stdio.h>
+int main()
+{
+    int i,j,n=8,min,temp;
+    int A[8]={39,10,87,90,35,17,22,28};
+    for(i=0;i<n-1;i++)
+    {
+        min=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(A[min]>A[j])
+              min=j;
+        }
+    temp=A[i];
+    A[i]=A[min];
+    A[min]=temp;
+    }
+    printf("The sorted array is");
+    for(i=0;i<n;i++)
+    {
+        printf(" %d",A[i]);
+    }
+    return 0;
+}
